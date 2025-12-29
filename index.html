@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>QuitFlow — מפסיקים לעשן עם לאון יעקובוב</title>
+  <meta name="description" content="QuitFlow — מערכת תודעה+מעשה להפסקת עישון. פרקים, תרגולים קצרים, וכלים לניצחון שקט." />
+
+  <meta property="og:title" content="QuitFlow — מפסיקים לעשן עם לאון יעקובוב" />
+  <meta property="og:description" content="דף בית לפרויקט QuitFlow: פרקים, תרגולים, וכלים חדים להפסקת עישון." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌬️</text></svg>">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <div class="bg-orbit" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./">
+      <span class="brand__icon" aria-hidden="true">🌬️</span>
+      <span class="brand__text">
+        <strong>QuitFlow</strong>
+        <small>מפסיקים לעשן עם לאון יעקובוב</small>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="#chapters">📖 פרקים</a>
+      <a href="#tools">🛠️ כלים</a>
+      <a href="#method">🧠 השיטה</a>
+      <a href="#map">🧭 מפת חופש</a>
+      <a href="#start" class="btn btn--primary">🚀 התחלה</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="start">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <div class="badge">
+            <span>🔥 תודעה + פעולה</span>
+            <span class="dot" aria-hidden="true"></span>
+            <span>🧱 בנוי לפרקים קצרים</span>
+          </div>
+
+          <h1>
+            QuitFlow
+            <span class="h1-sub">מערכת שקטה להפסקת עישון — בלי מלחמות, עם בהירות.</span>
+          </h1>
+
+          <p class="lead">
+            כאן לא “נלחמים בסיגריה”. כאן מפרקים את המערכת, משנים זהות, וסוגרים את הדלת — פעם אחת ולתמיד.
+            כל פרק מכניס אותך לעוד שכבה של שחרור: תודעה חדה + תרגול מיידי + פעולה יומית.
+          </p>
+
+          <div class="cta">
+            <a class="btn btn--primary" href="#chapters">📖 קרא פרק 1 עכשיו</a>
+            <a class="btn btn--ghost" href="#tools">🛠️ תרגול 60 שניות</a>
+            <a class="btn btn--ghost btn--tiny" href="./docs/roadmap.html">🧭 מסמכי המערכת</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__k">6</div>
+              <div class="stat__t">פרקים מוכנים באתר</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">24</div>
+              <div class="stat__t">שערים במפת השחרור</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">⚡</div>
+              <div class="stat__t">קצר • חד • מעשי</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">72</div>
+              <div class="stat__t">יעד פרקים מלא</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__panel">
+          <div class="card glow">
+            <h2 class="card__title">🧠 “הסיגריה לא נותנת — היא רק מפסיקה חוסר”</h2>
+            <p class="card__p">
+              רעיון ליבה: מעשנים “ממלאים” תחושה שהסיגריה עצמה מייצרת. כשמשנים את המשפט, הכישוף נשבר.
+              הדף הזה בנוי לתת לך נקודת אחיזה ברורה — בלי אשמה, בלי פחד, עם אהבה לעצמך.
+            </p>
+            <div class="card__hr"></div>
+
+            <div class="mini">
+              <div class="mini__row">
+                <span>🔒 דלת סגורה</span>
+                <small>אין “רק אחת”</small>
+              </div>
+              <div class="mini__row">
+                <span>🧩 פירוק מערכת</span>
+                <small>טריגר → פעולה → חיזוק</small>
+              </div>
+              <div class="mini__row">
+                <span>🪞 שינוי זהות</span>
+                <small>“אני לא הבעיה”</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card__title">⏱️ Craving Break — 60 שניות</h3>
+            <p class="card__p">טיימר קצר שמחזיר סמכות לנשימה. בלי דרמה.</p>
+            <div class="timer">
+              <div class="timer__ring" role="img" aria-label="Timer progress ring">
+                <div class="timer__time" id="timerTime">60</div>
+                <div class="timer__label">שניות</div>
+              </div>
+              <div class="timer__actions">
+                <button class="btn btn--primary" id="timerStart">▶ התחלה</button>
+                <button class="btn btn--ghost" id="timerReset">↻ איפוס</button>
+              </div>
+              <div class="hint" id="timerHint">🫁 נשימה: שאיפה 4 • החזקה 2 • נשיפה 6</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="chapters">
+      <div class="section__head">
+        <div>
+          <h2>📖 פרקים</h2>
+          <p>6 פרקים מוכנים + תשתית ל־72. כל פרק = תודעה + תרגול + פעולה.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">🧠 הבנת הכישוף</span>
+          <span class="chip">🫁 נשימה וחוויה</span>
+          <span class="chip">🪞 זהות חדשה</span>
+        </div>
+      </div>
+
+      <div class="grid">
+        <a class="tile" href="./chapters/01.html">
+          <span class="tile__k">01</span>
+          <span class="tile__t">הסיגריה הראשונה: הרגע שבו לא היית צריך כלום</span>
+          <span class="tile__s">QuitFlow / FirstFree</span>
+        </a>
+        <a class="tile" href="./chapters/02.html">
+          <span class="tile__k">02</span>
+          <span class="tile__t">לא חולשה: מערכת</span>
+          <span class="tile__s">QuitFlow / SystemNotWeakness</span>
+        </a>
+        <a class="tile" href="./chapters/03.html">
+          <span class="tile__k">03</span>
+          <span class="tile__t">השקר השקט</span>
+          <span class="tile__s">QuitFlow / SilentLie</span>
+        </a>
+        <a class="tile" href="./chapters/04.html">
+          <span class="tile__k">04</span>
+          <span class="tile__t">הנאה או הקלה?</span>
+          <span class="tile__s">QuitFlow / ReliefVsPleasure</span>
+        </a>
+        <a class="tile" href="./chapters/05.html">
+          <span class="tile__k">05</span>
+          <span class="tile__t">כוח רצון הוא לא הפתרון</span>
+          <span class="tile__s">QuitFlow / BeyondWillpower</span>
+        </a>
+        <a class="tile" href="./chapters/06.html">
+          <span class="tile__k">06</span>
+          <span class="tile__t">זהות מעשן מול זהות חופשי</span>
+          <span class="tile__s">QuitFlow / IdentityShift</span>
+        </a>
+
+        <a class="tile tile--ghost" href="./docs/roadmap.html">
+          <span class="tile__k">→</span>
+          <span class="tile__t">Roadmap ל־72 פרקים</span>
+          <span class="tile__s">מבנה + תכנון הרחבה</span>
+        </a>
+      </div>
+
+      <div class="callout">
+        ⭐ כל פרק נכתב כמו קלף תרגול: פתיחה ספרותית, אמת תודעתית, פירוק מערכת, תרגיל קצר, פעולה יומית, ציטוט מעצים ופזמון ראפ שמחבר ללב.
+      </div>
+    </section>
+
+    <section class="section" id="tools">
+      <div class="section__head">
+        <h2>🛠️ כלים קצרים</h2>
+        <p>בלי עומס. כל כלי עובד “כאן ועכשיו”.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="card__title">🧩 “זיהוי טריגר” (20 שניות)</h3>
+          <p class="card__p">
+            שאל משפט אחד: <strong>“מה הפעיל את המערכת עכשיו?”</strong><br/>
+            לחץ? שעמום? סוף משימה? מעבר מקום?
+          </p>
+          <div class="pill">זיהוי = התחלת פירוק</div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">🔒 “אין רק אחת” (10 שניות)</h3>
+          <p class="card__p">
+            כלל שער: <strong>לא פותחים את הדלת</strong>. “רק אחת” היא תחילת שרשרת.
+          </p>
+          <div class="pill">החלטה קצרה • חופש ארוך</div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">🪞 “שינוי משפט זהות” (15 שניות)</h3>
+          <p class="card__p">
+            החלף: <em>“אני מעשן”</em> → <strong>“אני אדם שמעשן לפעמים”</strong><br/>
+            ואז: <strong>“אני אדם שלא צריך עישון כדי להיות אני”</strong>
+          </p>
+          <div class="pill">זהות מתעדכנת דרך ניסוח</div>
+        </div>
+
+        <div class="card">
+          <h3 class="card__title">🌬️ “נשיפה ארוכה” (30 שניות)</h3>
+          <p class="card__p">
+            3 פעמים: <strong>שאיפה 4 • החזקה 2 • נשיפה 6</strong><br/>
+            הנשיפה הארוכה מחזירה יציבות למערכת.
+          </p>
+          <div class="pill">נשימה = סמכות</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        🧰 הכלים הקצרים מקבלים גרסה מודפסת בקלפי “Craving Cards” ואזור תרגול אינטראקטיבי ב־<code>app.js</code>.
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="section__head">
+        <h2>🧠 השיטה בקצרה</h2>
+        <p>שלושה עקרונות שמחזיקים את QuitFlow.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <h3 class="card__title">1) פירוק מערכת ⚙️</h3>
+          <p class="card__p">טריגר → פעולה → הקלה → חיזוק. משנים רכיב אחד — כל הלולאה נחלשת.</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">2) שינוי מסגרת 🔄</h3>
+          <p class="card__p">זה לא “ויתור על הנאה” — זו יציאה ממנגנון שמייצר חוסר ואז מוכר “הקלה”.</p>
+        </div>
+        <div class="card">
+          <h3 class="card__title">3) סגירת דלת 🔒</h3>
+          <p class="card__p">אין “רק אחת”. יש דלת פתוחה או דלת סגורה. דלת סגורה = שקט.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>⭐ יעד:</strong> להפוך ל“לא־מעשן שמח” — לא “מעשן שמוותר”.
+        השיטה מלווה בגיבוי טקסטואלי (24 שערים) + גרסה דיגיטלית (72 תרגולים מיקרוסקופיים).
+      </div>
+    </section>
+
+    <section class="section" id="map">
+      <div class="section__head">
+        <h2>🧭 מפת השחרור — 24 שערים</h2>
+        <p>מבנה מלא לספר + אתר. כל שער = עמוד קצר עם קלף תרגול.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3 class="card__title">🔹 שער א׳ — להבין את המלכודת</h3>
+          <p class="card__p">הכישוף נשבר כשמבינים שזו מערכת. 6 שערי תודעה שמחזירים את האחריות לעצמך.</p>
+          <div class="tagged">
+            <span class="tag">🚬 סיגריה ראשונה</span>
+            <span class="tag">🧠 מערכת לא חולשה</span>
+            <span class="tag">🐍 השקר השקט</span>
+            <span class="tag">🎭 הנאה או הקלה</span>
+            <span class="tag">⚖️ כוח רצון</span>
+            <span class="tag">🪞 זהות</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">🔹 שער ב׳ — לפרק את הרצון</h3>
+          <p class="card__p">12 פרקים של ניקוי: המפלצת הגדולה, המפלצת הקטנה, אין “רק אחת”, ריק מדומה ועוד.</p>
+          <div class="tagged">
+            <span class="tag">🐉 שטיפת מוח</span>
+            <span class="tag">🐭 “בא לי”</span>
+            <span class="tag">🛑 חוק השרשרת</span>
+            <span class="tag">🕳️ ריק מדומה</span>
+            <span class="tag">😨 פחד ואשמה</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">🔹 שער ג׳ — רגע החופש</h3>
+          <p class="card__p">מכין אותך לטקס השחרור: סיגריה אחרונה, שמחה במקום ויתור, חשק ≠ צורך.</p>
+          <div class="tagged">
+            <span class="tag">🕯️ טקס אחרון</span>
+            <span class="tag">🎉 שמחה ולא ויתור</span>
+            <span class="tag">🫁 גוף נושם</span>
+            <span class="tag">🧘‍♂️ חשק חולף</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">🔹 שער ד׳ — חיים חופשיים</h3>
+          <p class="card__p">יציבות יומיומית: מצבי לחץ בלי סיגריה, ניקוי רגשי, גאווה שקטה, חירות מתמשכת.</p>
+          <div class="tagged">
+            <span class="tag">🕊️ חיים בלי עישון</span>
+            <span class="tag">🔄 לחץ בלי עשן</span>
+            <span class="tag">🛠️ כלים יומיים</span>
+            <span class="tag">🌱 ניקוי רגשי</span>
+            <span class="tag">👑 גאווה שקטה</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        🧭 קרא את כל המפה במלואה בעמוד <a href="./docs/roadmap.html"><strong>docs/roadmap.html</strong></a> — כולל אינדקס מפתחות, אבני דרך לפיתוח האתר, והמרה ל־72 מיני־שערים.
+      </div>
+    </section>
+
+    <section class="section" id="docs">
+      <div class="section__head">
+        <h2>📄 מסמכי פרויקט</h2>
+        <p>כל מה שצריך כדי להרים את QuitFlow כמוצר חי.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="card__title">📘 המסמך הראשי</h3>
+          <p class="card__p">“מפסיקים לעשן עם לאון יעקובוב” — עקרונות ליבה, פזמון ראפ, תיעוד תאריכים וייעוד.</p>
+          <div class="pill">מנוסח בעברית חדה, מוכן להרחבה</div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">🧭 תוכן עניינים</h3>
+          <p class="card__p">מפת השחרור (24 שערים) מסודרת לארבעה שערים — מושלם לנחיתה, ספר, ופוסטים.</p>
+          <div class="pill">מוכן לניווט + קלפי תרגול</div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">🌐 Roadmap אתר</h3>
+          <p class="card__p">web-roadmap.md הומר ל־<strong>docs/roadmap.html</strong> עם קישורים חיים, מטריקות, ואבני בניין.</p>
+          <div class="pill">GitHub Pages • סטטי ומהיר</div>
+        </div>
+        <div class="card">
+          <h3 class="card__title">🛠️ קוד</h3>
+          <p class="card__p">HTML + CSS + JS נקי. אין תלות חיצונית. מוכן להרחבה ל־PWA או SPA עתידית.</p>
+          <div class="pill">שקט, מהיר, נגיש</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">🌬️ QuitFlow</div>
+          <div class="footer__small">Static site on GitHub Pages • Built for clarity.</div>
+        </div>
+        <div class="footer__links">
+          <a href="https://github.com/AnLoMinus/QuitFlow" target="_blank" rel="noreferrer">GitHub Repo</a>
+          <a href="https://anlominus.github.io/QuitFlow/" target="_blank" rel="noreferrer">Live Site</a>
+        </div>
+      </div>
+      <div class="footer__hr"></div>
+      <div class="footer__tiny" id="buildStamp">Build: —</div>
+    </footer>
+  </main>
+
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
